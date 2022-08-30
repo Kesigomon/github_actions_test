@@ -12,8 +12,8 @@ jobs:
       - name: Branch switch
         shell: bash
         run: |
-          export BRANCH_NAME="master"
-          if BRANCH_NAME = "master" ; then
+          BRANCH_NAME="master"
+          if $BRANCH_NAME = "master" ; then
             DIR_NAME="This is master!"
           else
             DIR_NAME="This is test!"
