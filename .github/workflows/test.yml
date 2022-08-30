@@ -13,7 +13,7 @@ jobs:
         shell: bash
         run: |
           BRANCH_NAME="master"
-          if $BRANCH_NAME = "master" ; then
+          if [[ $BRANCH_NAME = "master" ]]; then
             DIR_NAME="This is master!"
           else
             DIR_NAME="This is test!"
