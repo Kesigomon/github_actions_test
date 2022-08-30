@@ -6,6 +6,8 @@ on:
 
 jobs:
   test_job:
+    name: "Test Job"
+    runs-on: ubuntu-latest
     steps:
       - name: Branch switch
         shell: bash
