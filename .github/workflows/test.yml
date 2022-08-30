@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - master
+      - test
+
+jobs:
+  test_job:
+    steps:
+      - name: Branch switch
+        shell: bash
+        run: |
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          if BRANCH_NAME = "master" ; then
+            DIR_NAME="This is master!"
+          else
+            DIR_NAME="This is test!"
+          fi
+          echo "${DIR_NAME}"
